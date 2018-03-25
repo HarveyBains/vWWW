@@ -1,0 +1,44 @@
+---
+
+- hosts: vWeb
+  sudo: yes
+  gather_facts: false
+
+
+  vars:
+    skipThis: false
+
+
+  tasks:
+
+    - name: apt-get update
+      apt:
+        update-cache: yes
+      changed_when: 0
+      when: not skipThis
+
+    - name: Installs Apache2
+      apt: name=apache2 state=present
+      when: not skipThis
+
+    - name: Copies Apache files
+      shell: bash /vagrant/myScript.sh 
+      become: true
+
+
+    - name: Installs mySql 
+      apt: name=mysql-server state=present
+      when: not skipThis
+
+    - name: Installs PHP 
+      apt: name=php5 state=present
+      apt: name=libapache2-mod-php5 state=present
+      when: not skipThis
+
+
+
+    - name: Copies MacMini2 SSH public key to vagrant machine
+      copy: src=~/.ssh/id_rsa.pub dest=/home/vagrant/.ssh/
+    
+    - name: Appends ssh key to authorized_keys file
+      shell: cat /home/vagrant/.ssh/id_rsa.pub  >> /home/vagrant/.ssh/authorized_keys
