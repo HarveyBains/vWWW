@@ -24,6 +24,10 @@
     - name: Copies Apache files
       shell: bash /vagrant/myScript.sh 
       become: true
+      when: not skipThis
+
+    - name: ensure apache is running (and enable it at boot)
+      service: name=apache2  state=started enabled=yes
 
 
     - name: Installs mySql 
