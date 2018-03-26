@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   '@angular/cli' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ '@angular/cli', null ]
+5 verbose cache add name=undefined spec="@angular/cli" args=["@angular/cli",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '@angular/cli',
+6 verbose parsed url   path: '@angular/cli',
+6 verbose parsed url   href: '@angular/cli' }
+7 verbose cache add name="" spec="angular/cli" args=["","angular/cli"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'angular/cli',
+8 verbose parsed url   path: 'angular/cli',
+8 verbose parsed url   href: 'angular/cli' }
+9 silly lockFile 5cecaa1c-angular-cli angular/cli
+10 verbose lock angular/cli /home/vagrant/.npm/5cecaa1c-angular-cli.lock
+11 info maybeGithub Attempting angular/cli from git://github.com/angular/cli
+12 silly lockFile 057ccbdd-git-github-com-angular-cli git://github.com/angular/cli
+13 verbose lock git://github.com/angular/cli /home/vagrant/.npm/057ccbdd-git-github-com-angular-cli.lock
+14 verbose addRemoteGit [ 'git://github.com/angular/cli', 'master' ]
+15 silly lockFile 057ccbdd-git-github-com-angular-cli git://github.com/angular/cli
+16 silly lockFile 057ccbdd-git-github-com-angular-cli git://github.com/angular/cli
+17 info maybeGithub Attempting angular/cli from git+ssh://git@github.com:angular/cli
+18 silly lockFile c455b8ea-t-ssh-git-github-com-angular-cli git+ssh://git@github.com:angular/cli
+19 verbose lock git+ssh://git@github.com:angular/cli /home/vagrant/.npm/c455b8ea-t-ssh-git-github-com-angular-cli.lock
+20 verbose addRemoteGit [ 'git@github.com:angular/cli', 'master' ]
+21 silly lockFile 515723dd-git-github-com-angular-cli git@github.com:angular/cli
+22 silly lockFile 5cecaa1c-angular-cli angular/cli
+23 silly lockFile 5cecaa1c-angular-cli angular/cli
+24 error addLocal Could not install angular/cli
+25 error Error: ENOENT, stat 'angular/cli'
+26 error If you need help, you may report this log at:
+26 error     <http://github.com/isaacs/npm/issues>
+26 error or email it to:
+26 error     <npm-@googlegroups.com>
+27 error System Linux 3.13.0-143-generic
+28 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "@angular/cli"
+29 error cwd /vagrant/WebDev-sites/www/Angular-site
+30 error node -v v0.10.25
+31 error npm -v 1.3.10
+32 error path angular/cli
+33 error code ENOENT
+34 error errno 34
+35 verbose exit [ 34, true ]

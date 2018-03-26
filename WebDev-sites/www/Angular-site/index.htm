@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <body>
 
-<h1>Angular Site1</h1>
-<p>I think NodeJS is settled.</p>
+<div ng-app="">
+ 
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>Hello {{name}}</h1>
+
+</div>
 
 </body>
 </html>
+
