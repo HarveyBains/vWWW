@@ -35,10 +35,18 @@
       apt: name=nodejs state=present
       apt: name=npm state=present
 
+    - name: Alias for Node
+      file: src=/usr/bin/nodejs dest=/usr/local/bin/node state=link
+      become: true
+    
+    - name: NPM installs the NodeJS-Express framework
+      shell: npm install express-generator -g
+      become: true
 
     - name: Installs mySql 
       apt: name=mysql-server state=present
       when: skipThis
+
 
     - name: Installs PHP 
       apt: name=php5 state=present
