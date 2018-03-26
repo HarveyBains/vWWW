@@ -30,6 +30,12 @@
       service: name=apache2  state=started enabled=yes
 
 
+
+    - name: Installs NodeJs & NPM
+      apt: name=nodejs state=present
+      apt: name=npm state=present
+
+
     - name: Installs mySql 
       apt: name=mysql-server state=present
       when: skipThis
