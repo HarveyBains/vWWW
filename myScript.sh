@@ -1,14 +1,17 @@
 
 sudo cp /vagrant/.bashrc .
 
-sudo ln -s /vagrant/WebDev-sites/www/Html-site /var/www/site1
-sudo ln -s /vagrant/WebDev-sites/www/NodeJs-site /var/www/site2
+sudo rm -rf /var/www/html
+sudo ln -s /vagrant/WebDev-sites/www/Html-site /var/www/html
+sudo ln -s /vagrant/WebDev-sites/www/NodeJs-site /var/www/node
+sudo ln -s /vagrant/WebDev-sites/www/Angular-site /var/www/angular
 
 
-sudo cp /vagrant/WebDev-sites/site1.conf /etc/apache2/sites-available/
-sudo cp /vagrant/WebDev-sites/site2.conf /etc/apache2/sites-available/
+sudo cp /vagrant/WebDev-sites/Html.conf /etc/apache2/sites-available/
+sudo cp /vagrant/WebDev-sites/Node.conf /etc/apache2/sites-available/
+sudo cp /vagrant/WebDev-sites/Angular.conf /etc/apache2/sites-available/
 
-sudo a2ensite site1.conf site2.conf 
+sudo a2ensite Html.conf Node.conf Angular.conf 
 sudo service apache2 reload
 
 
