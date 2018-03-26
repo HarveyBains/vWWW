@@ -32,7 +32,7 @@
 
     - name: Installs mySql 
       apt: name=mysql-server state=present
-      when: not skipThis
+      when: skipThis
 
     - name: Installs PHP 
       apt: name=php5 state=present
